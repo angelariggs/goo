@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/alexanderbanks/goo/issues"
   },
-  "homepage": "https://github.com/alexanderbanks/goo#readme"
+  "homepage": "https://github.com/alexanderbanks/goo#readme",
+  "dependencies": {
+    "request": "^2.74.0"
+  }
 }
