@@ -51,6 +51,4 @@ function prettyPrint(results) {
     }
   });
   ChalkHelper.bottom();
-
-  ChalkHelper.hide('Never trust a big butt and a smile.');
 }
