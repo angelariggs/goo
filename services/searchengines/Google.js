@@ -59,21 +59,20 @@ function filterResults(html) {
     var $ = cheerio.load(html);
     var allResults =  $('.g > h3 > a');
     var filteredResults = [];
-    //TODO move somewhere more organized
-    var filterByList = ['wikipedia', 'stackoverflow'];
 
     //TODO do all of this better idiot
     allResults.each(function(i, el) {
         //Skip the first because its not an actual result
         if (i != 0) {
-            var urlObj = getUrlFromResult(el);
-            for (var j = 0; j < filterByList.length; j++) {
-                if (urlObj.host.indexOf(filterByList[j]) != -1) {
-                    filteredResults.push(urlObj)
-                }
-            }
+          var urlObj = getUrlFromResult(el);
+          for (var service in Strategies) {
+              if (urlObj.host.indexOf(Strategies[service].Domain) != -1) {
+                  filteredResults.push(urlObj)
+              }
+          }
         }
     });
+    console.log(filteredResults);
     return filteredResults;
 }
 
