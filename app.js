@@ -4,7 +4,6 @@ process.env.QUERY = process.argv.slice(2).join(' ');
 var Services = require('./services');
 var Strategies = require('./strategies');
 var request = require('request');
-
 var ChalkHelper = require('./helpers').ChalkHelper;
 
 
