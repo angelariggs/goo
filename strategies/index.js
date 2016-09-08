@@ -3,5 +3,6 @@
 'use strict';
 
 module.exports = {
-  StackOverflow: require('./stackoverflow/StackOverflowScraper')
+  StackOverflow: require('./stackoverflow/StackOverflowScraper'),
+  Wikipedia: require('./wikipedia/WikipediaScraper')
 };
