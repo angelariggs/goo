@@ -48,5 +48,5 @@ function prettyPrint(results) {
   });
   ChalkHelper.bottom();
 
-  ChalkHelper.hide('Alex Rules 6969 Blaze It 420420420');
+  ChalkHelper.hide('Never trust a big butt and a smile.');
 }
