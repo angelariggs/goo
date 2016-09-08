@@ -31,5 +31,9 @@
     "html-entities": "^1.2.0",
     "request": "^2.74.0",
     "url": "^0.11.0"
-  }
+  },
+  "bin": {
+    "goo": "app.js"
+  },
+  "preferGlobal": true
 }
