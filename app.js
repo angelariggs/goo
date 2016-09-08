@@ -1,24 +1,28 @@
 #!/usr/bin/env node
 'use strict';
 
-process.env.QUERY = process.argv.slice(2).join(' ');
+var query = process.argv.slice(2).join(' ');
 var Services = require('./services');
 var Strategies = require('./strategies');
+
 var request = require('request');
 var ChalkHelper = require('./helpers').ChalkHelper;
 
 
-var url = 'http://stackoverflow.com/questions/1634115/whats-the-difference-between-git-reset-hard-and-git-reset-merge?noredirect=1&lq=1';
-request(url, function(error, request, body) {
-  prettyPrint(Strategies.StackOverflow.Scrape(body));
-});
-url = 'https://en.wikipedia.org/wiki/Tito%E2%80%93Stalin_Split';
-request(url, function(error, request, body) {
-  prettyPrint(Strategies.Wikipedia.Scrape(body));
-});
+// var url = 'http://stackoverflow.com/questions/1634115/whats-the-difference-between-git-reset-hard-and-git-reset-merge?noredirect=1&lq=1';
+// request(url, function(error, request, body) {
+//   prettyPrint(Strategies.StackOverflow.Scrape(body));
+// });
+// url = 'https://en.wikipedia.org/wiki/Tito%E2%80%93Stalin_Split';
+// request(url, function(error, request, body) {
+//   prettyPrint(Strategies.Wikipedia.Scrape(body));
+// });
 
 
-switch(process.env.QUERY) {
+Services.Cache.init();
+
+
+switch(query) {
   case 'again':
     // Services.Again();
     break;
@@ -26,7 +30,7 @@ switch(process.env.QUERY) {
     // Services.More();
     break;
   default:
-    // Services.Goo(process.env.QUERY);
+    Services.Google.Search(query).then(function(d) { prettyPrint(d)});
 }
 
 
@@ -35,7 +39,7 @@ function prettyPrint(results) {
   //Do some stuff to the output
   //Then print
   ChalkHelper.top();
-  ChalkHelper.question();
+  ChalkHelper.question(query);
   results.forEach(function(result) {
     if (result.type === 'code') {
       ChalkHelper.code(result.text);
@@ -43,5 +47,5 @@ function prettyPrint(results) {
       ChalkHelper.text(result.text);
     }
   });
-  ChalkHelper.bottom()
+  ChalkHelper.bottom();
 }

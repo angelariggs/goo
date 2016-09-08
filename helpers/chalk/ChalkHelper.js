@@ -6,7 +6,8 @@ module.exports = {
   code: code,
   top: top,
   bottom: bottom,
-  question: question
+  question: question,
+  hide: hide
 }
 
 function text(t) {
@@ -14,7 +15,7 @@ function text(t) {
 }
 
 function code(text) {
-  console.log(chalk.bold('\t \t' + text))
+  console.log(chalk.bold('\n' + text + '\n'))
 }
 
 function top() {
@@ -25,6 +26,10 @@ function bottom() {
   console.log(chalk.bgCyan.underline('\t\t\t GOO FIN \t\t\t'))
 }
 
-function question() {
-  console.log(chalk.bold.magenta('\t' + 'Question: ') + chalk.bold.green(process.env.QUERY));
+function question(text) {
+  console.log(chalk.bold.magenta('\t' + 'Question: ') + chalk.bold.green(text));
+}
+
+function hide(text) {
+  console.log(chalk.hidden(text));
 }

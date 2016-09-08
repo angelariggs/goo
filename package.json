@@ -26,9 +26,13 @@
   },
   "homepage": "https://github.com/alexanderbanks/goo#readme",
   "dependencies": {
+    "chalk": "^1.1.3",
     "cheerio": "^0.22.0",
+    "crypto": "0.0.3",
+    "html-entities": "^1.2.0",
+    "q": "^1.4.1",
     "request": "^2.74.0",
-    "chalk": "^1.1.3"
+    "url": "^0.11.0"
   },
   "bin": {
     "goo": "app.js"
