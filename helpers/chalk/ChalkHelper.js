@@ -26,8 +26,8 @@ function bottom() {
   console.log(chalk.bgCyan.underline('\t\t\t GOO FIN \t\t\t'))
 }
 
-function question() {
-  console.log(chalk.bold.magenta('\t' + 'Question: ') + chalk.bold.green(process.env.QUERY));
+function question(text) {
+  console.log(chalk.bold.magenta('\t' + 'Question: ') + chalk.bold.green(text));
 }
 
 function hide(text) {
