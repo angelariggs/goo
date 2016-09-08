@@ -27,6 +27,7 @@
   "homepage": "https://github.com/alexanderbanks/goo#readme",
   "dependencies": {
     "cheerio": "^0.22.0",
-    "request": "^2.74.0"
+    "request": "^2.74.0",
+    "chalk": "^1.1.3"
   }
 }
