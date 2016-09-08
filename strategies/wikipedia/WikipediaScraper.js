@@ -3,7 +3,8 @@
 var cheerio = require('cheerio');
 
 module.exports = {
-  Scrape: Scrape
+  Scrape: Scrape,
+  Domain: 'wikipedia.org'
 };
 
 function Scrape(html, more) {
