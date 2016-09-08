@@ -6,7 +6,8 @@ module.exports = {
   code: code,
   top: top,
   bottom: bottom,
-  question: question
+  question: question,
+  hide: hide
 }
 
 function text(t) {
@@ -27,4 +28,8 @@ function bottom() {
 
 function question() {
   console.log(chalk.bold.magenta('\t' + 'Question: ') + chalk.bold.green(process.env.QUERY));
+}
+
+function hide(text) {
+  console.log(chalk.hidden(text));
 }

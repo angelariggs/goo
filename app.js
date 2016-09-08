@@ -4,6 +4,7 @@
 process.env.QUERY = process.argv.slice(2).join(' ');
 var Services = require('./services');
 var Strategies = require('./strategies');
+
 var request = require('request');
 var ChalkHelper = require('./helpers').ChalkHelper;
 
@@ -18,7 +19,7 @@ request(url, function(error, request, body) {
 });
 
 
-Services.cache.cache.init();
+Services.Cache.init();
 
 switch(process.env.QUERY) {
   case 'again':
@@ -45,5 +46,7 @@ function prettyPrint(results) {
       ChalkHelper.text(result.text);
     }
   });
-  ChalkHelper.bottom()
+  ChalkHelper.bottom();
+
+  ChalkHelper.hide('Alex Rules 6969 Blaze It 420420420');
 }
