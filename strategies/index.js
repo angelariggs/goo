@@ -3,5 +3,5 @@
 'use strict';
 
 module.exports = {
-  
+  StackOverflow: require('./stackoverflow/StackOverflowScrape');
 }
