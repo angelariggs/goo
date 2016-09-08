@@ -18,6 +18,8 @@ request(url, function(error, request, body) {
 });
 
 
+Services.cache.cache.init();
+
 switch(process.env.QUERY) {
   case 'again':
     // Services.Again();
