@@ -3,5 +3,5 @@
 'use strict';
 
 module.exports = {
-  
-}
+  Google: require('./searchengines/Google')
+};
