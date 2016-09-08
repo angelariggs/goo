@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 'use strict';
 
 process.env.QUERY = process.argv.slice(2).join(' ');
