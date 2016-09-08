@@ -1,5 +1,5 @@
 {
-  "name": "goo",
+  "name": "node-goo",
   "version": "0.0.1",
   "description": "A command line google/question answering utility",
   "main": "app.js",
