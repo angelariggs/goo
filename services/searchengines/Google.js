@@ -29,8 +29,7 @@ function searchCallback(err, resp, body) {
     }
 
     if (resp.statusCode == 200) {
-        var results = filterResults(body);
-        var resultHtml = getResultHTML(results);
+        getResultHTML(filterResults(body));
     }
 }
 
@@ -59,8 +58,6 @@ function getResultHTML(results) {
 function filterResults(html) {
     var $ = cheerio.load(html);
     var allResults =  $('.g > h3 > a');
-
-    var entities = new htmlentities();
     var filteredResults = [];
     //TODO move somewhere more organized
     var filterByList = ['wikipedia', 'stackoverflow'];
@@ -69,8 +66,7 @@ function filterResults(html) {
     allResults.each(function(i, el) {
         //Skip the first because its not an actual result
         if (i != 0) {
-            var decordedUrl = url.parse(entities.decode(el.attribs.href), true);
-            var urlObj = url.parse(decordedUrl.query.q)
+            var urlObj = getUrlFromResult(el);
             for (var j = 0; j < filterByList.length; j++) {
                 if (urlObj.host.indexOf(filterByList[j]) != -1) {
                     filteredResults.push(urlObj)
@@ -79,4 +75,10 @@ function filterResults(html) {
         }
     });
     return filteredResults;
+}
+
+function getUrlFromResult(el) {
+    var entities = new htmlentities();
+    var decordedUrl = url.parse(entities.decode(el.attribs.href), true);
+    return url.parse(decordedUrl.query.q);
 }
