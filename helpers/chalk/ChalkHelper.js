@@ -15,7 +15,7 @@ function text(t) {
 }
 
 function code(text) {
-  console.log(chalk.bold('\t \t' + text))
+  console.log(chalk.bold('\n' + text + '\n'))
 }
 
 function top() {

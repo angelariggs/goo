@@ -8,13 +8,10 @@ module.exports = {
 };
 
 function Scrape(html, more) {
-  console.log('I AM SCRAPING')
 	var $ = cheerio.load(html);
-	var content = $('#mw-content-text');
-	var para = content.find('p').eq(more ? 1 : 0);
+	var para = $('#mw-content-text > p').eq(more ? 1 : 0);
 	if(para.length == 0) {
 		return [{'type': 'text', 'text': 'Sorry, no answer found'}];
 	}
-  console.log('PARA', para.text())
 	return [{'type': 'text', 'text': para.text()}];
 }
