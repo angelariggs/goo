@@ -32,5 +32,6 @@
   },
   "bin": {
     "goo": "app.js"
-  }
+  },
+  "preferGlobal": true
 }
