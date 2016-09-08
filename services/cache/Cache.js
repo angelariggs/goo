@@ -9,6 +9,7 @@ var crypt = require('crypto');
 var fs = require('fs');
 var os = require('os');
 var request = require('request');
+var q = require('q');
 
 var GOO_CACHE_DIR = os.homedir() + '/.goo_cache/';
 
@@ -37,15 +38,22 @@ function cleanCache() {
 
 function get(url) {
 	// Checks cache for url, and retrieves it if it's not present
+	var def = q.defer();
 	console.log('getting ', url);
 	var cached = getCachedVersion(url);
 	if(cached != null) {
 		console.log('found in cache');
-		return cached;
+		def.resolve(cached);
 	}
 	request(url, function(error, response, body) {
+		if (err) {
+			def.reject(error);
+		}
+		def.resolve(body);
 		saveCachedVersion(url, body);
 	});
+
+	return def.promise;
 }
 
 function getCachedVersion(url) {
