@@ -20,6 +20,10 @@ request(url, function(error, request, body) {
 
 
 Services.Cache.init();
+Services.Cache.get('http://www.google.com').then(function() {
+  console.log('ALEX RULES');
+});
+
 
 switch(process.env.QUERY) {
   case 'again':

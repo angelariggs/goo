@@ -5,7 +5,7 @@ module.exports = {
 	get: get
 };
 
-var crypt = require('crypto');
+var crypto = require('crypto');
 var fs = require('fs');
 var os = require('os');
 var request = require('request');
@@ -39,19 +39,20 @@ function cleanCache() {
 function get(url) {
 	// Checks cache for url, and retrieves it if it's not present
 	var def = q.defer();
-	console.log('getting ', url);
 	var cached = getCachedVersion(url);
 	if(cached != null) {
-		console.log('found in cache');
 		def.resolve(cached);
+	} else {
+		request(url, function(error, response, body) {
+			if (error) {
+				def.reject(error);
+			} else {
+				saveCachedVersion(url, body);
+				def.resolve(body);
+			}
+		});
 	}
-	request(url, function(error, response, body) {
-		if (err) {
-			def.reject(error);
-		}
-		def.resolve(body);
-		saveCachedVersion(url, body);
-	});
+
 
 	return def.promise;
 }
@@ -70,6 +71,5 @@ function cacheFilenamePath(url) {
 }
 
 function saveCachedVersion(url, contents) {
-	console.log('saving cache for ', url);
 	fs.writeFileSync(cacheFilenamePath(url), contents);
 }
