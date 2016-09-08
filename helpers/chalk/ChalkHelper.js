@@ -5,7 +5,8 @@ module.exports = {
   text: text,
   code: code,
   top: top,
-  bottom: bottom
+  bottom: bottom,
+  question: question
 }
 
 function text(t) {
@@ -22,4 +23,8 @@ function top() {
 
 function bottom() {
   console.log(chalk.bgCyan.underline('\t\t\t GOO FIN \t\t\t'))
+}
+
+function question() {
+  console.log(chalk.bold.magenta('\t' + 'Question: ') + chalk.bold.green(process.env.QUERY));
 }

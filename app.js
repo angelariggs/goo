@@ -35,7 +35,7 @@ function prettyPrint(results) {
   //Do some stuff to the output
   //Then print
   ChalkHelper.top();
-  ChalkHelper.text('Question: ' + process.env.QUERY);
+  ChalkHelper.question();
   results.forEach(function(result) {
     if (result.type === 'code') {
       ChalkHelper.code(result.text);
