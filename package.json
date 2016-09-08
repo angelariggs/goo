@@ -1,0 +1,28 @@
+{
+  "name": "goo",
+  "version": "0.0.1",
+  "description": "A command line google/question answering utility",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexanderbanks/goo.git"
+  },
+  "keywords": [
+    "command",
+    "line",
+    "google",
+    "stack",
+    "overflow",
+    "fun",
+    "friendship"
+  ],
+  "author": "Alex Banks, Matt Borowiec, Angela Riggs, Toby Craig, Michelle Udem",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexanderbanks/goo/issues"
+  },
+  "homepage": "https://github.com/alexanderbanks/goo#readme"
+}
