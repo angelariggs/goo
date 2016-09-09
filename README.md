@@ -20,6 +20,7 @@ Goo is built on a node framework. It is a command line utility for searching the
 # Local Project Setup
 
 Make sure you have node and npm installed
+
 npm install -g goo
 
 # Usage
