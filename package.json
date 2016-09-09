@@ -5,7 +5,7 @@
   "description": "A command line google/question answering utility",
   "main": "app.js",
   "scripts": {
-    "test": "npm test"
+    "test": "mocha --recursive --timeout 5000"
   },
   "repository": {
     "type": "git",
@@ -39,5 +39,9 @@
   "bin": {
     "goo": "app.js"
   },
-  "preferGlobal": true
+  "preferGlobal": true,
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
+  }
 }
