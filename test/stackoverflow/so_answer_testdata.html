@@ -1,0 +1,438 @@
+<div id="answer-8888015" class="answer accepted-answer" data-answerid="8888015" itemscope="" itemtype="http://schema.org/Answer" itemprop="acceptedAnswer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+
+
+                <div class="vote">
+                    <input type="hidden" name="_id_" value="8888015">
+                    <a class="vote-up-off" title="This answer is useful">up vote</a>
+                    <span itemprop="upvoteCount" class="vote-count-post high-scored-post">4300</span>
+                    <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+                    <span class="vote-accepted-on load-accepted-answer-date" title="loading when this answer was accepted...">accepted</span>
+
+                </div>
+
+            </td>
+
+
+
+            <td class="answercell">
+                <div class="post-text" itemprop="text">
+                    <h2>Important: If you have any local changes, they will be lost. With or without <code>--hard</code> option, any local commits that haven't been pushed will be lost.<sup>[*]</sup></h2>
+
+                    <p>If you have any files that are <em>not</em> tracked by Git (e.g. uploaded user content), these files will not be affected.</p>
+
+                    <hr>
+
+                    <p>I think this is the right way:</p>
+
+                    <pre><code>git fetch --all
+git reset --hard origin/master
+</code></pre>
+
+                    <p>OR If you are on some other branch</p>
+
+                    <pre><code>git reset --hard origin/your_branch
+</code></pre>
+
+                    <h3>Explanation:</h3>
+
+                    <p><code>git fetch</code> downloads the latest from remote without trying to merge or rebase anything.</p>
+
+                    <p>Then the <code>git reset</code> resets the master branch to what you just fetched. The <code>--hard</code> option changes all the files in your working tree to match the files in <code>origin/master</code></p>
+
+                    <hr>
+
+                    <p><sup>[*]</sup>: It's worth noting that it is possible to maintain current local commits by creating a branch from <code>master</code> before resetting:</p>
+
+                    <pre><code>git checkout master
+git branch new-branch-to-save-current-commits
+git fetch --all
+git reset --hard origin/master
+</code></pre>
+
+                    <p>After this, all of the old commits will be kept in <code>new-branch-to-save-current-commits</code>. Uncommitted changes however (even staged), will be lost. Make sure to stash and commit anything you need.</p>
+                </div>
+                <table class="fw">
+                    <tbody><tr>
+                        <td class="vt">
+                            <div class="post-menu"><a href="/a/8888015" title="short permalink to this answer" class="short-link" id="link-post-8888015">share</a><span class="lsep">|</span><a href="/posts/8888015/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+                        <td align="right" class="post-signature">
+                            <div class="user-info user-hover">
+                                <div class="user-action-time">
+                                    <a href="/posts/8888015/revisions" title="show all edits to this post">edited <span title="2015-08-27 06:03:19Z" class="relativetime">Aug 27 '15 at 6:03</span></a>
+                                </div>
+                                <div class="user-gravatar32">
+                                    <a href="/users/1665592/swapnil"><div class="gravatar-wrapper-32"><img src="https://i.stack.imgur.com/hgWUV.jpg?s=32&amp;g=1" alt="" width="32" height="32"></div></a>
+                                </div>
+                                <div class="user-details">
+                                    <a href="/users/1665592/swapnil">Swapnil</a>
+                                    <div class="-flair">
+                                        <span class="reputation-score" title="reputation score " dir="ltr">1,674</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="13 silver badges"><span class="badge2"></span><span class="badgecount">13</span></span><span title="38 bronze badges"><span class="badge3"></span><span class="badgecount">38</span></span>
+                                    </div>
+                                </div>
+                            </div>    </td>
+
+
+
+                        <td align="right" class="post-signature">
+
+
+                            <div class="user-info ">
+                                <div class="user-action-time">
+                                    answered <span title="2012-01-17 00:02:58Z" class="relativetime">Jan 17 '12 at 0:02</span>
+                                </div>
+                                <div class="user-gravatar32">
+                                    <a href="/users/489564/rna"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/b802fc38893a1abf9e8f955ac78ceb99?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+                                </div>
+                                <div class="user-details">
+                                    <a href="/users/489564/rna">RNA</a>
+                                    <div class="-flair">
+                                        <span class="reputation-score" title="reputation score 46,556" dir="ltr">46.6k</span><span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span><span title="26 silver badges"><span class="badge2"></span><span class="badgecount">26</span></span><span title="40 bronze badges"><span class="badge3"></span><span class="badgecount">40</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody></table>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="votecell"></td>
+            <td>
+                <div id="comments-8888015" class="comments ">
+                    <table>
+                        <tbody data-remaining-comments-count="25" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+                        <tr id="comment-11777443" class="comment ">
+                            <td class="comment-actions">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <td class=" comment-score">
+                                            <span title="number of 'useful comment' votes received" class="supernova">82</span>
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td class="comment-text">
+                                <div style="display: block;" class="comment-body">
+                                    <span class="comment-copy">This is the correct answer, that will properly make the local repository exactly match the remote tracking branch.</span>
+                                    –&nbsp;<a href="/users/40468/ether" title="39,533 reputation" class="comment-user">Ether</a>
+                                    <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment11777443_8888015"><span title="2012-02-17 17:25:19Z" class="relativetime-clean">Feb 17 '12 at 17:25</span></a></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="comment-14418203" class="comment ">
+                            <td class="comment-actions">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <td class=" comment-score">
+                                            <span title="number of 'useful comment' votes received" class="supernova">57</span>
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td class="comment-text">
+                                <div style="display: block;" class="comment-body">
+                                    <span class="comment-copy">I can confirm that this is likely what you want when you've totally hosed your local repository and don't care about any local commits and you just want whatever was in your remote because you know it's good.</span>
+                                    –&nbsp;<a href="/users/329602/seaneshbaugh" title="615 reputation" class="comment-user">seaneshbaugh</a>
+                                    <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment14418203_8888015"><span title="2012-06-14 05:58:58Z" class="relativetime-clean">Jun 14 '12 at 5:58</span></a></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="comment-18493373" class="comment ">
+                            <td class="comment-actions">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <td class=" comment-score">
+                                            <span title="number of 'useful comment' votes received" class="supernova">307</span>
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td class="comment-text">
+                                <div style="display: block;" class="comment-body">
+                                    <span class="comment-copy">It's a popular question, so I'd like to clarify on the top comment here. I just executed commands as described in this answer and it hasn't removed ALL the local files. Only the remotely tracked files were overwritten, and every local file that has been here was left untouched.</span>
+                                    –&nbsp;<a href="/users/388636/red" title="470 reputation" class="comment-user">Red</a>
+                                    <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment18493373_8888015"><span title="2012-11-22 10:38:05Z" class="relativetime-clean">Nov 22 '12 at 10:38</span></a></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="comment-23996707" class="comment ">
+                            <td class="comment-actions">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <td class=" comment-score">
+                                            <span title="number of 'useful comment' votes received" class="warm">7</span>
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td class="comment-text">
+                                <div style="display: block;" class="comment-body">
+                                    <span class="comment-copy">This worked for me and my local files were NOT deleted.</span>
+                                    –&nbsp;<a href="/users/1461393/tastybrownies" title="382 reputation" class="comment-user">Tastybrownies</a>
+                                    <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment23996707_8888015"><span title="2013-05-21 18:16:11Z" class="relativetime-clean">May 21 '13 at 18:16</span></a></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="comment-30881955" class="comment ">
+                            <td class="comment-actions">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <td class=" comment-score">
+                                            <span title="number of 'useful comment' votes received" class="warm">5</span>
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td class="comment-text">
+                                <div style="display: block;" class="comment-body">
+                                    <span class="comment-copy">in case you're pulling from a repo that has its remote branch name different from "master", use <code>git reset --hard origin/branch-name</code></span>
+                                    –&nbsp;<a href="/users/638670/nerrve" title="3,033 reputation" class="comment-user">Nerrve</a>
+                                    <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment30881955_8888015"><span title="2013-12-17 11:17:24Z" class="relativetime-clean">Dec 17 '13 at 11:17</span></a></span>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="comments-link-8888015" data-rep="50" data-anon="true">
+
+                    <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+                    <a class="js-show-link comments-link " title="expand to show all comments on this post" href="#" onclick="">show <b>25</b> more comments</a>
+                </div>
+            </td>
+        </tr>    </tbody></table>
+</div>
+<div id="answer-2798934" class="answer" data-answerid="2798934" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+
+
+                <div class="vote">
+                    <input type="hidden" name="_id_" value="2798934">
+                    <a class="vote-up-off" title="This answer is useful">up vote</a>
+                    <span itemprop="upvoteCount" class="vote-count-post ">555</span>
+                    <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+                </div>
+
+            </td>
+
+
+
+            <td class="answercell">
+                <div class="post-text" itemprop="text">
+                    <p>Try this:</p>
+
+                    <pre><code>git reset --hard HEAD
+git pull
+</code></pre>
+
+                    <p>Should do what you want.</p>
+                </div>
+                <table class="fw">
+                    <tbody><tr>
+                        <td class="vt">
+                            <div class="post-menu"><a href="/a/2798934" title="short permalink to this answer" class="short-link" id="link-post-2798934">share</a><span class="lsep">|</span><a href="/posts/2798934/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+
+
+
+                        <td align="right" class="post-signature">
+
+
+                            <div class="user-info user-hover">
+                                <div class="user-action-time">
+                                    answered <span title="2010-05-09 19:45:21Z" class="relativetime">May 9 '10 at 19:45</span>
+                                </div>
+                                <div class="user-gravatar32">
+                                    <a href="/users/105562/travis-r"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/e66ceae48943526967c5118011e58b63?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+                                </div>
+                                <div class="user-details">
+                                    <a href="/users/105562/travis-r">Travis R</a>
+                                    <div class="-flair">
+                                        <span class="reputation-score" title="reputation score 14,955" dir="ltr">15k</span><span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span><span title="48 silver badges"><span class="badge2"></span><span class="badgecount">48</span></span><span title="54 bronze badges"><span class="badge3"></span><span class="badgecount">54</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody></table>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="votecell"></td>
+            <td>
+                <div id="comments-2798934" class="comments ">
+                    <table>
+                        <tbody data-remaining-comments-count="4" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+                        <tr id="comment-6372815" class="comment ">
+                            <td class="comment-actions">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <td class=" comment-score">
+                                            <span title="number of 'useful comment' votes received" class="warm">8</span>
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td class="comment-text">
+                                <div style="display: block;" class="comment-body">
+                                    <span class="comment-copy">I've done this and some local files that were no longer in repo were left on the disk.</span>
+                                    –&nbsp;<a href="/users/80421/piotr-owsiak" title="2,402 reputation" class="comment-user">Piotr Owsiak</a>
+                                    <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment6372815_2798934"><span title="2011-04-08 16:00:57Z" class="relativetime-clean">Apr 8 '11 at 16:00</span></a></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="comment-7897445" class="comment ">
+                            <td class="comment-actions">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <td class=" comment-score">
+                                            <span title="number of 'useful comment' votes received" class="warm">12</span>
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td class="comment-text">
+                                <div style="display: block;" class="comment-body">
+                                    <span class="comment-copy">I do not think that this is correct. the above will perform a merge, not overwrite which was requested in the question: "How to force git to overwrite them?" I do not have the answer, I am currently looking for it.. at the moment I switch to the branch with with the code that I want to keep "git checkout BranchWithCodeToKeep", then do "git branch -D BranchToOverwrite" and then finally "git checkout -b BranchToOverwrite". you will now have the exact code from BranchWithCodeToKeep on the branch BranchToOverwrite without having to perform a merge.</span>
+                                    –&nbsp;<a href="/users/236805/felbus" title="1,322 reputation" class="comment-user">Felbus</a>
+                                    <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment7897445_2798934"><span title="2011-07-13 10:11:31Z" class="relativetime-clean">Jul 13 '11 at 10:11</span></a></span>
+                                    <span class="edited-yes" title="this comment was edited 2 times"></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="comment-11847290" class="comment ">
+                            <td class="comment-actions">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <td class=" comment-score">
+                                            <span title="number of 'useful comment' votes received" class="supernova">190</span>
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td class="comment-text">
+                                <div style="display: block;" class="comment-body">
+                                    <span class="comment-copy">instead of merging using 'git pull', try git fetch --all followed by 'git reset --hard origin/master'</span>
+                                    –&nbsp;<a href="/users/337710/lloyd-moore" title="1,880 reputation" class="comment-user">Lloyd Moore</a>
+                                    <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment11847290_2798934"><span title="2012-02-21 14:56:54Z" class="relativetime-clean">Feb 21 '12 at 14:56</span></a></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="comment-14817291" class="comment ">
+                            <td class="comment-actions">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <td class=" comment-score">
+                                            <span title="number of 'useful comment' votes received" class="hot">20</span>
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td class="comment-text">
+                                <div style="display: block;" class="comment-body">
+                                    <span class="comment-copy">Lloyd Moore's suggestion works, Travis R's answer does not work.</span>
+                                    –&nbsp;<a href="/users/16007/dwelch" title="36,522 reputation" class="comment-user">dwelch</a>
+                                    <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment14817291_2798934"><span title="2012-06-29 21:47:39Z" class="relativetime-clean">Jun 29 '12 at 21:47</span></a></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="comment-18393886" class="comment ">
+                            <td class="comment-actions">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <td class=" comment-score">
+                                            <span title="number of 'useful comment' votes received" class="cool">1</span>
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td class="comment-text">
+                                <div style="display: block;" class="comment-body">
+                                    <span class="comment-copy">yep, the @lloydmoore solution worked for me.  Could do with being an answer rather than just a comment.</span>
+                                    –&nbsp;<a href="/users/138557/max-williams" title="19,063 reputation" class="comment-user">Max Williams</a>
+                                    <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment18393886_2798934"><span title="2012-11-19 09:54:51Z" class="relativetime-clean">Nov 19 '12 at 9:54</span></a></span>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="comments-link-2798934" data-rep="50" data-anon="true">
+
+                    <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+                    <a class="js-show-link comments-link " title="expand to show all comments on this post" href="#" onclick="">show <b>4</b> more comments</a>
+                </div>
+            </td>
+        </tr>    </tbody></table>
+</div>

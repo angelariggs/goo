@@ -2,19 +2,34 @@
 
 var chalk = require('chalk');
 module.exports = {
-  text: text,
-  code: code,
-  top: top,
-  bottom: bottom,
-  question: question
+  prettyPrint: prettyPrint
+}
+
+function prettyPrint(results) {
+    //Do some stuff to the output
+    //Then print
+    results = results || [{'type': 'text', 'text': 'Sorry, no answer found'}];
+
+    top();
+    question(this);
+    results.forEach(function(result) {
+      if (result.type === 'code') {
+        code(result.text);
+      } else {
+        text(result.text);
+      }
+    });
+    bottom();
 }
 
 function text(t) {
   console.log('\t' + t);
 }
 
+
 function code(text) {
-  console.log(chalk.bold('\t \t' + text))
+  text = '\n' + text;
+  console.log(chalk.bold.inverse('\n' + text.replace(/\n/g, '\n\t') + '\n'))
 }
 
 function top() {
@@ -25,6 +40,10 @@ function bottom() {
   console.log(chalk.bgCyan.underline('\t\t\t GOO FIN \t\t\t'))
 }
 
-function question() {
-  console.log(chalk.bold.magenta('\t' + 'Question: ') + chalk.bold.green(process.env.QUERY));
+function question(text) {
+  console.log(chalk.bold.magenta('\t' + 'Question: ') + chalk.bold.green(text));
+}
+
+function hide(text) {
+  console.log(chalk.hidden(text));
 }

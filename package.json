@@ -1,10 +1,11 @@
 {
-  "name": "goo",
-  "version": "0.0.1",
+  "name": "node-goo",
+  "man": "./manual/goo.1",
+  "version": "0.0.2",
   "description": "A command line google/question answering utility",
   "main": "app.js",
   "scripts": {
-    "test": "npm test"
+    "test": "mocha --recursive --timeout 5000"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,8 @@
     "stack",
     "overflow",
     "fun",
-    "friendship"
+    "friendship",
+    "alex"
   ],
   "author": "Alex Banks, Matt Borowiec, Angela Riggs, Toby Craig, Michelle Udem",
   "license": "MIT",
@@ -26,12 +28,20 @@
   },
   "homepage": "https://github.com/alexanderbanks/goo#readme",
   "dependencies": {
+    "chalk": "^1.1.3",
     "cheerio": "^0.22.0",
+    "crypto": "0.0.3",
+    "html-entities": "^1.2.0",
+    "q": "^1.4.1",
     "request": "^2.74.0",
-    "chalk": "^1.1.3"
+    "url": "^0.11.0"
   },
   "bin": {
     "goo": "app.js"
   },
-  "preferGlobal": true
+  "preferGlobal": true,
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
+  }
 }

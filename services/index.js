@@ -3,5 +3,7 @@
 'use strict';
 
 module.exports = {
+  Cache: require('./cache/Cache'),
+  Google: require('./searchengines/Google')
+};
 
-}
