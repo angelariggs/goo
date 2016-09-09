@@ -13,14 +13,21 @@ Services.Cache.init();
 
 
 switch(query) {
-  case 'again':
-  // Services.Again();
+  case 'expand':
+    // Services.Again();
     break;
   case 'more':
-  // Services.More();
+    var last_query = Services.Cache.getLastRequest();
+    if(last_query == null) {
+      console.log('no last query! IDIOT');
+    } else {
+      Services.Google.Search(last_query.query, last_query.n + 1).then(function(d) { prettyPrint(d)});
+      Services.Cache.writeLastRequest(last_query.query, last_query.n + 1)
+    }
     break;
   default:
-    Services.Google.Search(query).then(prettyPrint);
+    Services.Cache.writeLastRequest(query, 0);
+    Services.Google.Search(query, 0).then(function(d) { prettyPrint(d)});
 }
 
 

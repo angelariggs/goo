@@ -2,7 +2,9 @@
 
 module.exports = {
   init: init,
-  get: get
+  getLastRequest: getLastRequest,
+  get: get,
+  writeLastRequest: writeLastRequest
 };
 
 var crypto = require('crypto');
@@ -12,6 +14,7 @@ var request = require('request');
 var q = require('q');
 
 var GOO_CACHE_DIR = os.homedir() + '/.goo_cache/';
+var GOO_LAST_REQUEST = os.homedir() + '/.goo';
 
 function init() {
   // Creates cache directory if necessary and cleans old files from it
@@ -20,6 +23,24 @@ function init() {
   }
 
   cleanCache();
+}
+
+function getLastRequest() {
+  // Gets last query (if any) and how many times more has been called
+  if(!fs.existsSync(GOO_LAST_REQUEST)) {
+    return null;
+  }
+  var contents = fs.readFileSync(GOO_LAST_REQUEST, 'utf8').split('\n');
+  return {
+    query: contents[1],
+    n: parseInt(contents[0])
+  };
+}
+
+function writeLastRequest(query, n) {
+  // Writes last query and how many times more has been called to .goo file
+  var contents = n + '\n' + query;
+  fs.writeFileSync(GOO_LAST_REQUEST, contents);
 }
 
 function cleanCache() {
@@ -53,7 +74,6 @@ function get(url) {
       }
     });
   }
-
 
   return def.promise;
 }

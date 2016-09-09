@@ -16,26 +16,27 @@ function Search(query, n) {
   query = query.replace(/ /g, '_');
   var url = 'https://google.com/search?q=' + query;
   return Cache.get(url)
-  .then(function(results) {
-    return results;
-  })
-  .then(filterResults)
-  .then(function(results) {
-    if (results.length === 0) {
-      return null;
-    }
-    return getResultHTML(results[n] || results[0]);
-  });
+    .then(function(results) {
+      return results;
+    })
+    .then(filterResults)
+    .then(function(results) {
+      return getResultHTML(results[0], n);
+    });
 }
 
-function getResultHTML(result) {
+function searchCallback(body) {
+  return getResultHTML(filterResults(body));
+}
+
+function getResultHTML(result, n) {
   return Cache.get(result.href).then(function(data) {
     for (var strat in Strategies) {
       if (Strategies[strat].Domain === result.hostname) {
-        return Strategies[strat].Scrape(data);
+        return Strategies[strat].Scrape(data, n);
       }
     }
-  });
+  }});
 }
 
 function filterResults(html) {

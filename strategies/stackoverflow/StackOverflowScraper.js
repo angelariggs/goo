@@ -7,9 +7,9 @@ module.exports = {
   Domain: 'stackoverflow.com'
 };
 
-function Scrape(html, more) {
+function Scrape(html, n) {
   var $ = cheerio.load(html);
-  var answer = $('.answer').eq(more ? 1 : 0);
+  var answer = $('.answer').eq(n);
   if(answer.length == 0) {
     return [{'type': 'text', 'text': 'Sorry, no answer found'}];
   }

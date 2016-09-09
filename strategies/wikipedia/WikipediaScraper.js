@@ -7,9 +7,9 @@ module.exports = {
   Domain: 'en.wikipedia.org'
 };
 
-function Scrape(html, more) {
+function Scrape(html, n) {
   var $ = cheerio.load(html);
-  var para = $('#mw-content-text > p').eq(more ? 1 : 0);
+  var para = $('#mw-content-text > p').eq(n);
   if(para.length == 0) {
     return [{'type': 'text', 'text': 'Sorry, no answer found'}];
   }
