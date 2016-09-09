@@ -4,7 +4,7 @@ goo(1) -- Search Stack Overflow & Wikipedia from the command line
 
 ## SYNOPSIS
 
-`goo` [more] [expand] [again]
+`goo` [more] [again]
 
 ## DESCRIPTION
 
@@ -15,9 +15,6 @@ goo(1) -- Search Stack Overflow & Wikipedia from the command line
   * `more`:
     ** For Stack Overflow, this will display the next answer on the page
     ** For Wikipedia, this will display the next paragraph / chunk on the page
-
-  * `expand`:
-    Expands a truncated result display
 
   * `again`:
     Displays the results of your most recent query
