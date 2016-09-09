@@ -1,6 +1,6 @@
 # goo
 
-# Contents of this File 
+# Contents of this File
 
 * [Purpose](#purpose)
 * [Project Overview](#project-overview)
@@ -11,11 +11,11 @@
 
 # Purpose
 
-Goo is a command line search program. The purpose of Goo is to allow developers to perform a search within their current working window as oppose to leaving the window and opening a new browser. 
+Goo is a command line search program. The purpose of Goo is to allow developers to perform a search within their current working window as oppose to leaving the window and opening a new browser.
 
 # Project Overview
 
-Goo is built on a node framework. It is a command line utility for searching the web. 
+Goo is built on a node framework. It is a command line utility for searching the web.
 
 # Local Project Setup
 
@@ -25,13 +25,13 @@ npm install -g goo
 
 # Usage
 
-Goo + question yields an answer from Wikipedia or Stack Overflow
+_goo <query>_ yields an answer from Wikipedia or Stack Overflow
 
-Goo again yields last answer
+_goo again_ yields last answer
 
-Goo more yields the next top answer
+_goo more_ yields the next top answer (Stack Overflow) OR the next paragraph chunk (Wikipedia)
 
-Man goo yields the manual for goo
+_man goo_ yields the manual for goo
 
 Example query: <code>goo git reset master <code>
 
