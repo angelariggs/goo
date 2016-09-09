@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 
-var query = process.argv.slice(2).join(' ');
+var query = process.argv.slice(2).join(' ').trim();
 var request = require('request');
 var Services = require('./services');
 var Strategies = require('./strategies');
@@ -14,6 +14,9 @@ switch(query) {
     break;
   case 'more':
     Services.Google.More();
+    break;
+  case '':
+    console.log('type goo something');
     break;
   default:
     Services.Google.Search(query, 0);
