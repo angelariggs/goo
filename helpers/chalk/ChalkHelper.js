@@ -26,8 +26,10 @@ function text(t) {
   console.log('\t' + t);
 }
 
+
 function code(text) {
-  console.log(chalk.bold('\n' + text + '\n'))
+  text = '\n' + text;
+  console.log(chalk.bold.inverse('\n' + text.replace(/\n/g, '\n\t') + '\n'))
 }
 
 function top() {
