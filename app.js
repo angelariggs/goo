@@ -2,35 +2,25 @@
 'use strict';
 
 var query = process.argv.slice(2).join(' ');
-var Services = require('./services');
-var Strategies = require('./strategies');
 
 var request = require('request');
+
+var Services = require('./services');
+var Strategies = require('./strategies');
 var ChalkHelper = require('./helpers').ChalkHelper;
-
-
-// var url = 'http://stackoverflow.com/questions/1634115/whats-the-difference-between-git-reset-hard-and-git-reset-merge?noredirect=1&lq=1';
-// request(url, function(error, request, body) {
-//   prettyPrint(Strategies.StackOverflow.Scrape(body));
-// });
-// url = 'https://en.wikipedia.org/wiki/Tito%E2%80%93Stalin_Split';
-// request(url, function(error, request, body) {
-//   prettyPrint(Strategies.Wikipedia.Scrape(body));
-// });
-
 
 Services.Cache.init();
 
 
 switch(query) {
   case 'again':
-    // Services.Again();
+  // Services.Again();
     break;
   case 'more':
-    // Services.More();
+  // Services.More();
     break;
   default:
-    Services.Google.Search(query).then(function(d) { prettyPrint(d)});
+    Services.Google.Search(query).then(prettyPrint);
 }
 
 
@@ -38,6 +28,8 @@ switch(query) {
 function prettyPrint(results) {
   //Do some stuff to the output
   //Then print
+  results = results || [{'type': 'text', 'text': 'Sorry, no answer found'}];
+
   ChalkHelper.top();
   ChalkHelper.question(query);
   results.forEach(function(result) {
