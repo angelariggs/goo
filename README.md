@@ -37,8 +37,8 @@ Example query: `goo git reset master`
 
 Output:
 
-![image](./img/search-example-01.png?raw=true)
+![image](http://i.imgur.com/2S41NHz.png)
 
 ===============================================================
 
-![image](./img/search-example-02.png?raw=true)
+![image](http://i.imgur.com/nmS3yss.png)
