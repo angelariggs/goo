@@ -6,7 +6,7 @@
   "main": "app.js",
   "scripts": {
     "test": "mocha --recursive --timeout 5000",
-	"coverage": "istanbul cover --include-all-sources true --report html _mocha -- --recursive"
+    "coverage": "istanbul cover --include-all-sources true --report html _mocha -- --recursive"
   },
   "repository": {
     "type": "git",
@@ -43,6 +43,7 @@
   "preferGlobal": true,
   "devDependencies": {
     "chai": "^3.5.0",
+    "istanbul": "^0.4.5",
     "mocha": "^3.0.2",
     "mock-fs": "^3.11.0"
   }
