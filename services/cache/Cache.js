@@ -49,7 +49,7 @@ function cleanCache() {
   var filename, stat;
   var cutoff = Date.now() - 7 * 24 * 60 * 60 * 1000;
   for(var i = 0; i < files.length; i++) {
-    filename = GOO_CACHE_DIR + files[0];
+    filename = GOO_CACHE_DIR + files[i];
     stat = fs.statSync(filename);
     if(Date.parse(stat.ctime) < cutoff) {
       fs.unlinkSync(filename);
@@ -66,7 +66,7 @@ function get(url) {
   } else {
     request(url, function(error, response, body) {
       if (error) {
-        console.log('ERROR:', error);
+        console.log('E  RROR:', error);
         def.reject(error);
       } else {
         saveCachedVersion(url, body);

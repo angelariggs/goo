@@ -3,12 +3,12 @@ var fs = require('fs');
 var wikipedia = require('../../strategies/wikipedia/WikipediaScraper');
 
 describe('WikipediaScraper', function() {
-  it("Should have the wikipedia domain publicly accessible", function() {
+  it('Should have the wikipedia domain publicly accessible', function() {
     assert.equal(wikipedia.Domain, "en.wikipedia.org")
   });
 
   it('Should apologize if no results are found', function() {
-    var output = wikipedia.Scrape("", false);
+    var output = wikipedia.Scrape('', false);
     assert.equal(output.length, 1);
     assert.equal(output[0].text, "Sorry, no answer found")
   });
