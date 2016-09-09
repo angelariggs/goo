@@ -43,4 +43,8 @@ Output:
 
 ===============================================================
 
+Example query: `goo ron artest`
+
+Output:
+
 ![image](http://i.imgur.com/nmS3yss.png)
