@@ -33,7 +33,7 @@ _goo more_ yields the next top answer (Stack Overflow) OR the next paragraph chu
 
 _man goo_ yields the manual for goo
 
-Example query: `goo git reset master`
+Example query: `goo javascript splice`
 
 Output:
 
