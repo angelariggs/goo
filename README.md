@@ -15,14 +15,22 @@ Goo is a command line search program. The purpose of Goo is to allow developers 
 
 # Project Overview
 
-Goo is built on a node framework. Command line utility for searching the web. 
+Goo is built on a node framework. It is a command line utility for searching the web. 
 
 # Local Project Setup
 
-Make sure you made the node in mpm.
-mpm install -g goo
+Make sure you have node and npm installed
+npm install -g goo
 
 # Usage
 
--Show an example for how to use Goo, Goo More and Goo Again
+Goo + question yields an answer from Wikipedia or Stack Overflow
+<code>goo git reset master <code>
+output
 
+Goo again yields last answer
+Goo more yields the next top answer
+Man goo yields the manual for goo
+
+
+![image](./img/search-example-02.png?raw=true)
