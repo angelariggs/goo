@@ -4,7 +4,7 @@ goo(1) -- Search Stack Overflow & Wikipedia from the command line
 
 ## SYNOPSIS
 
-`goo` [<more>] [<expand>]
+`goo` [more] [expand] [again]
 
 ## DESCRIPTION
 
@@ -19,14 +19,13 @@ goo(1) -- Search Stack Overflow & Wikipedia from the command line
   * `expand`:
     Expands a truncated result display
 
-## EXAMPLES
-
-_Forthcoming_
+  * `again`:
+    Displays the results of your most recent query
 
 ## COPYRIGHT
 
 Goo is copyright (c) 2016, Alex Banks, Matt Borowiec, Angela Riggs, Toby Craig, Michelle Udem. Released under the MIT license.
 
 ## AUTHOR
-This man page was authored by (Angela Riggs)[https://github.com/angelariggs]
+This man page was authored by [Angela Riggs](https://github.com/angelariggs)
 
