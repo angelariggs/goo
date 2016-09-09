@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 
-var query = process.argv.slice(2).join(' ');
+process.env.QUERY = process.argv.slice(2).join(' ');
 
 var request = require('request');
 
@@ -12,7 +12,7 @@ var ChalkHelper = require('./helpers').ChalkHelper;
 Services.Cache.init();
 
 
-switch(query) {
+switch(process.env.QUERY) {
   case 'expand':
 
     break;
@@ -23,8 +23,8 @@ switch(query) {
     lastRequest(true);
     break;
   default:
-    Services.Cache.writeLastRequest(query, 0);
-    Services.Google.Search(query, 0).then(prettyPrint);
+    Services.Cache.writeLastRequest(process.env.QUERY, 0);
+    Services.Google.Search(process.env.QUERY, 0).then(ChalkHelper.prettyPrint);
 }
 
 function lastRequest(next) {
@@ -34,28 +34,9 @@ function lastRequest(next) {
   }
 
   if (next) {
-    Services.Google.Search(last_query.query, last_query.n + 1).then(prettyPrint);
+    Services.Google.Search(last_query.query, last_query.n + 1).then(ChalkHelper.prettyPrint);
     Services.Cache.writeLastRequest(last_query.query, last_query.n + 1)
   } else {
-    Services.Google.Search(last_query.query, last_query.n).then(prettyPrint);
+    Services.Google.Search(last_query.query, last_query.n).then(ChalkHelper.prettyPrint);
   }
-}
-
-
-
-function prettyPrint(results) {
-  //Do some stuff to the output
-  //Then print
-  results = results || [{'type': 'text', 'text': 'Sorry, no answer found'}];
-
-  ChalkHelper.top();
-  ChalkHelper.question(query);
-  results.forEach(function(result) {
-    if (result.type === 'code') {
-      ChalkHelper.code(result.text);
-    } else {
-      ChalkHelper.text(result.text);
-    }
-  });
-  ChalkHelper.bottom();
 }
