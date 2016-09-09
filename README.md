@@ -11,18 +11,17 @@
 
 # Purpose
 
-Goo is a command line search program. The purpose of Goo is to allow developers to perform a search within their current working window as oppose to leaving the window and opening a new browser.
+Goo is a command line search program. The purpose of Goo is to allow developers to perform a search within their current working terminal as opposed to leaving the terminal and opening a browser.
 
 # Project Overview
 
-Goo is built on a node framework. Command line utility for searching the web.
+Goo is built on with Node, Cheerio and Chalk. It is a command line utility for finding relevant data without leaving the terminal.
 
 # Local Project Setup
 
-Make sure you have npm and node installed. Then do:
-npm install -g goo
+Make sure you have npm and node installed. Then run:
+`npm install -g goo`
 
 # Usage
 
-TODO: Example for how to use Goo, Goo More and Goo Again
-
+![usage](http://i.imgur.com/2S41NHz.png)
