@@ -33,9 +33,12 @@ Goo more yields the next top answer
 
 Man goo yields the manual for goo
 
-<code>goo git reset master <code>
-output
+Example query: <code>goo git reset master <code>
+
+Output:
 
 ![image](./img/search-example-01.png?raw=true)
+
+===============================================================
 
 ![image](./img/search-example-02.png?raw=true)
