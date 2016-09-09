@@ -18,7 +18,6 @@ function Search(query, n) {
   Cache.writeLastRequest(query, n);
 
 
-  query = query.replace(/ /g, '_');
   var url = 'https://google.com/search?q=' + query;
   return Cache.get(url)
     .then(function(results) {
