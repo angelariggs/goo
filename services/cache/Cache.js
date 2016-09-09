@@ -40,7 +40,6 @@ function get(url) {
   // Checks cache for url, and retrieves it if it's not present
   var def = q.defer();
   var cached = getCachedVersion(url);
-  console.log('2', cached.length);
   if(cached != null) {
     def.resolve(cached);
   } else {
