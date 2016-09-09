@@ -25,7 +25,7 @@ Make sure you have node and npm installed
 
 # Usage
 
-_goo \<query>_ yields an answer from Wikipedia or Stack Overflow
+_goo <query>_ yields an answer from Wikipedia or Stack Overflow
 
 _goo again_ yields last answer
 
@@ -33,7 +33,7 @@ _goo more_ yields the next top answer (Stack Overflow) OR the next paragraph chu
 
 _man goo_ yields the manual for goo
 
-Example query: <code>goo git reset master <code>
+Example query: `goo git reset master`
 
 Output:
 
@@ -42,4 +42,3 @@ Output:
 ===============================================================
 
 ![image](./img/search-example-02.png?raw=true)
->>>>>>> 711a0d6a0d07f1c1236a540cd3756d123919fae1
