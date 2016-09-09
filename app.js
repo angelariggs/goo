@@ -14,20 +14,31 @@ Services.Cache.init();
 
 switch(query) {
   case 'expand':
-    // Services.Again();
+
+    break;
+  case 'again':
+    lastRequest();
     break;
   case 'more':
-    var last_query = Services.Cache.getLastRequest();
-    if(last_query == null) {
-      console.log('no last query! IDIOT');
-    } else {
-      Services.Google.Search(last_query.query, last_query.n + 1).then(function(d) { prettyPrint(d)});
-      Services.Cache.writeLastRequest(last_query.query, last_query.n + 1)
-    }
+    lastRequest(true);
     break;
   default:
     Services.Cache.writeLastRequest(query, 0);
-    Services.Google.Search(query, 0).then(function(d) { prettyPrint(d)});
+    Services.Google.Search(query, 0).then(prettyPrint);
+}
+
+function lastRequest(next) {
+  var last_query = Services.Cache.getLastRequest();
+  if (last_query == null) {
+    return console.log('No Last Query! IDIOT');
+  }
+
+  if (next) {
+    Services.Google.Search(last_query.query, last_query.n + 1).then(prettyPrint);
+    Services.Cache.writeLastRequest(last_query.query, last_query.n + 1)
+  } else {
+    Services.Google.Search(last_query.query, last_query.n).then(prettyPrint);
+  }
 }
 
 
