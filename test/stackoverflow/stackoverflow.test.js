@@ -13,18 +13,18 @@ describe('StackOverflowScraper', function() {
     assert.equal(output[0].text, "Sorry, no answer found")
   });
 
-  it('Should return an array of objects if answer is found', function() {
+  it('Should return first answer as an array of objects if answer is found', function() {
     var testdata = fs.readFileSync('./test/stackoverflow/so_answer_testdata.html', 'utf8');
-    var output = stackoverflow.Scrape(testdata);
+    var output = stackoverflow.Scrape(testdata, 0);
     assert.isAbove(output.length, 1);
     assert.isTrue((output[0].hasOwnProperty('text')));
     assert.isTrue((output[0].hasOwnProperty('type')));
     assert.notInclude(output[0].text, "Try this:")
   })
 
-  it('Should return 2nd answer if true is passed as second param to Scrape()', function() {
+  it('Should return 2nd answer from SO', function() {
     var testdata = fs.readFileSync('./test/stackoverflow/so_answer_testdata.html', 'utf8');
-    var output = stackoverflow.Scrape(testdata, true);
+    var output = stackoverflow.Scrape(testdata, 1);
     assert.isAbove(output.length, 1);
     assert.isTrue((output[0].hasOwnProperty('text')));
     assert.isTrue((output[0].hasOwnProperty('type')));

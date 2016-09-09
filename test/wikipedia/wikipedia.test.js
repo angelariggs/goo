@@ -22,7 +22,7 @@ describe('WikipediaScraper', function() {
     assert.notInclude(output[0].text, 'Originally spaghetti was notably long')
   });
 
-  it('Should return the second paragraph if true is second param to Scrape() ', function() {
+  it('Should return the second paragraph ', function() {
     var testdata = fs.readFileSync('./test/wikipedia/wiki_answer_testdata.html', 'utf8');
     var output = wikipedia.Scrape(testdata, true);
     assert.equal(output.length, 1);
