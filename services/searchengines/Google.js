@@ -9,10 +9,15 @@ var Cache = require('../cache/Cache');
 
 
 module.exports = {
-  Search: Search
+  Search: Search,
+  More: More,
+  Again: Again
 };
 
 function Search(query, n) {
+  Cache.writeLastRequest(query, n);
+
+
   query = query.replace(/ /g, '_');
   var url = 'https://google.com/search?q=' + query;
   return Cache.get(url)
@@ -25,8 +30,32 @@ function Search(query, n) {
     });
 }
 
-function searchCallback(body) {
-  return getResultHTML(filterResults(body));
+function More() {
+  var last = lastCaress();
+  if(last) {
+    return Search(last.query, last.n + 1).then(function(data) {
+      Cache.writeLastRequest(last.query, last.n + 1);
+      return data;
+    })
+  }
+}
+
+function Again() {
+  var last = lastCaress();
+  if (last) {
+    return Search(last.query, 0);
+  }
+}
+
+
+function lastCaress() {
+  var last_query = Cache.getLastRequest();
+  if (last_query == null) {
+    console.log('No Last Query! IDIOT');
+    return null;
+  }
+
+  return last_query;
 }
 
 function getResultHTML(result, n) {

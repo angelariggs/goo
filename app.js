@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 
-process.env.QUERY = process.argv.slice(2).join(' ');
+var query = process.argv.slice(2).join(' ');
 
 var request = require('request');
 
@@ -12,31 +12,15 @@ var ChalkHelper = require('./helpers').ChalkHelper;
 Services.Cache.init();
 
 
-switch(process.env.QUERY) {
+switch(query) {
   case 'expand':
-
     break;
   case 'again':
-    lastRequest();
+    Services.Google.Again().then(ChalkHelper.prettyPrint.bind(query));
     break;
   case 'more':
-    lastRequest(true);
+    Services.Google.More().then(ChalkHelper.prettyPrint.bind(query));
     break;
   default:
-    Services.Cache.writeLastRequest(process.env.QUERY, 0);
-    Services.Google.Search(process.env.QUERY, 0).then(ChalkHelper.prettyPrint);
-}
-
-function lastRequest(next) {
-  var last_query = Services.Cache.getLastRequest();
-  if (last_query == null) {
-    return console.log('No Last Query! IDIOT');
-  }
-
-  if (next) {
-    Services.Google.Search(last_query.query, last_query.n + 1).then(ChalkHelper.prettyPrint);
-    Services.Cache.writeLastRequest(last_query.query, last_query.n + 1)
-  } else {
-    Services.Google.Search(last_query.query, last_query.n).then(ChalkHelper.prettyPrint);
-  }
+    Services.Google.Search(query, 0).then(ChalkHelper.prettyPrint.bind(query));
 }

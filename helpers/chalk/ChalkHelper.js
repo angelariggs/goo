@@ -11,7 +11,7 @@ function prettyPrint(results) {
     results = results || [{'type': 'text', 'text': 'Sorry, no answer found'}];
 
     top();
-    question(process.env.QUERY);
+    question(this);
     results.forEach(function(result) {
       if (result.type === 'code') {
         code(result.text);
