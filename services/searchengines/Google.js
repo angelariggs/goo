@@ -36,7 +36,7 @@ function getResultHTML(result, n) {
         return Strategies[strat].Scrape(data, n);
       }
     }
-  }});
+  });
 }
 
 function filterResults(html) {
