@@ -4,7 +4,7 @@ goo(1) -- Search Stack Overflow & Wikipedia from the command line
 
 ## SYNOPSIS
 
-`goo` [<more>] [<again>]
+`goo` [<more>] [<expand>]
 
 ## DESCRIPTION
 
@@ -12,14 +12,16 @@ Goo is a command line utility for searching the web. Goo currently uses Stack Ov
 
 ## OPTIONS
 
-  * `-m`, `--more`:
+  * `more`:
     For Stack Overflow, will display the next answer on the page
     For Wikipedia, will display the next paragraph on the page
 
-  * `-a`, `--again`:
-    Displays the answer for the last query you searched
+  * `expand`:
+    Expands a truncated result display
 
 ## EXAMPLES
+
+_Forthcoming_
 
 ## COPYRIGHT
 

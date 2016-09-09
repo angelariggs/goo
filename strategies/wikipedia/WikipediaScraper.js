@@ -7,11 +7,11 @@ module.exports = {
   Domain: 'en.wikipedia.org'
 };
 
-function Scrape(html, more) {
-	var $ = cheerio.load(html);
-	var para = $('#mw-content-text > p').eq(more ? 1 : 0);
-	if(para.length == 0) {
-		return [{'type': 'text', 'text': 'Sorry, no answer found'}];
-	}
-	return [{'type': 'text', 'text': para.text()}];
+function Scrape(html, n) {
+  var $ = cheerio.load(html);
+  var para = $('#mw-content-text > p').eq(n);
+  if(para.length == 0) {
+    return [{'type': 'text', 'text': 'Sorry, no answer found'}];
+  }
+  return [{'type': 'text', 'text': para.text()}];
 }

@@ -2,12 +2,24 @@
 
 var chalk = require('chalk');
 module.exports = {
-  text: text,
-  code: code,
-  top: top,
-  bottom: bottom,
-  question: question,
-  hide: hide
+  prettyPrint: prettyPrint
+}
+
+function prettyPrint(results) {
+    //Do some stuff to the output
+    //Then print
+    results = results || [{'type': 'text', 'text': 'Sorry, no answer found'}];
+
+    top();
+    question(this);
+    results.forEach(function(result) {
+      if (result.type === 'code') {
+        code(result.text);
+      } else {
+        text(result.text);
+      }
+    });
+    bottom();
 }
 
 function text(t) {
