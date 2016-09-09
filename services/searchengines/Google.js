@@ -6,7 +6,7 @@ var url = require('url');
 var htmlentities = require('html-entities').AllHtmlEntities;
 var Strategies = require('../../strategies');
 var Cache = require('../cache/Cache');
-
+var ChalkHelper = require('../../helpers').ChalkHelper;
 
 module.exports = {
   Search: Search,
@@ -27,15 +27,14 @@ function Search(query, n) {
     .then(filterResults)
     .then(function(results) {
       return getResultHTML(results[0], n);
-    });
+    }).then(ChalkHelper.prettyPrint.bind(query));
 }
 
 function More() {
   var last = lastCaress();
   if(last) {
-    return Search(last.query, last.n + 1).then(function(data) {
+    Search(last.query, last.n + 1).then(function(data) {
       Cache.writeLastRequest(last.query, last.n + 1);
-      return data;
     })
   }
 }
@@ -43,7 +42,7 @@ function More() {
 function Again() {
   var last = lastCaress();
   if (last) {
-    return Search(last.query, 0);
+    Search(last.query, 0);
   }
 }
 
