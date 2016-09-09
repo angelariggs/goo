@@ -8,6 +8,8 @@
 * [Usage](#usage)
 
 
+![Goo!](http://media2.giphy.com/media/FT0UFROtAbVEA/giphy.gif)
+
 
 # Purpose
 
