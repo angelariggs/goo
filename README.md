@@ -25,12 +25,11 @@ npm install -g goo
 # Usage
 
 Goo + question yields an answer from Wikipedia or Stack Overflow
-<code>goo git reset master <code>
-output
-
 Goo again yields last answer
 Goo more yields the next top answer
 Man goo yields the manual for goo
+<code>goo git reset master <code>
+output
 
-
+![image](./img/search-example-01.png?raw=true)
 ![image](./img/search-example-02.png?raw=true)
