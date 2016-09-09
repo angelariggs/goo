@@ -1,7 +1,7 @@
 {
   "name": "node-goo",
   "man": "./manual/goo.1",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A command line google/question answering utility",
   "main": "app.js",
   "scripts": {
