@@ -5,7 +5,7 @@
 * [Purpose](#purpose)
 * [Project Overview](#project-overview)
 * [Local Project Setup](#local-project-setup)
-* []
+* [Usage](#usage)
 
 
 
@@ -19,8 +19,10 @@ Goo is built on a node framework. Command line utility for searching the web.
 
 # Local Project Setup
 
-Make sure you made the node in mpm
-MPM Install in g-goo
+Make sure you made the node in mpm.
+mpm install -g goo
 
+# Usage
 
+-Show an example for how to use Goo, Goo More and Goo Again
 
