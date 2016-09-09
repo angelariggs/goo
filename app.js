@@ -9,8 +9,6 @@ var Strategies = require('./strategies');
 Services.Cache.init();
 
 switch(query) {
-  case 'expand':
-    break;
   case 'again':
     Services.Google.Again();
     break;
