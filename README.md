@@ -19,10 +19,10 @@ Goo is built on a node framework. Command line utility for searching the web.
 
 # Local Project Setup
 
-Make sure you made the node in npm.
+Make sure you have npm and node installed. Then do:
 npm install -g goo
 
 # Usage
 
--Show an example for how to use Goo, Goo More and Goo Again
+TODO: Example for how to use Goo, Goo More and Goo Again
 
