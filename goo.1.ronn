@@ -26,5 +26,5 @@ Goo is a command line utility for searching the web. Goo currently uses Stack Ov
 Goo is copyright (c) 2016, Alex Banks, Matt Borowiec, Angela Riggs, Toby Craig, Michelle Udem. Released under the MIT license.
 
 ## AUTHOR
-This man page was authored by (Matt Borowiec)[https://github.com/MattBorowiec] & (Angela Riggs)[https://github.com/angelariggs]
+This man page was authored by (Angela Riggs)[https://github.com/angelariggs]
 
