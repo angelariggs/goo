@@ -19,6 +19,17 @@ describe('StackOverflowScraper', function() {
     assert.isAbove(output.length, 1);
     assert.isTrue((output[0].hasOwnProperty('text')));
     assert.isTrue((output[0].hasOwnProperty('type')));
+    assert.notInclude(output[0].text, "Try this:")
+  })
+
+  it('Should return 2nd answer if true is passed as second param to Scrape()', function() {
+    var testdata = fs.readFileSync('./test/stackoverflow/so_answer_testdata.html', 'utf8');
+    var output = stackoverflow.Scrape(testdata, true);
+    assert.isAbove(output.length, 1);
+    assert.isTrue((output[0].hasOwnProperty('text')));
+    assert.isTrue((output[0].hasOwnProperty('type')));
+    assert.include(output[0].text, "Try this:")
+
   })
 });
 

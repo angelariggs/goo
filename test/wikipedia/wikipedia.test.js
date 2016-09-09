@@ -15,10 +15,21 @@ describe('WikipediaScraper', function() {
 
   it('Should return an array of objects if answer is found', function() {
     var testdata = fs.readFileSync('./test/wikipedia/wiki_answer_testdata.html', 'utf8');
-    var output = wikipedia.Scrape(testdata);
+    var output = wikipedia.Scrape(testdata, false);
     assert.equal(output.length, 1);
     assert.isTrue((output[0].hasOwnProperty('text')));
     assert.isTrue((output[0].hasOwnProperty('type')));
+    assert.notInclude(output[0].text, 'Originally spaghetti was notably long')
+  });
+
+  it('Should return the second paragraph if true is second param to Scrape() ', function() {
+    var testdata = fs.readFileSync('./test/wikipedia/wiki_answer_testdata.html', 'utf8');
+    var output = wikipedia.Scrape(testdata, true);
+    assert.equal(output.length, 1);
+    assert.isTrue((output[0].hasOwnProperty('text')));
+    assert.isTrue((output[0].hasOwnProperty('type')));
+    assert.include(output[0].text, 'Originally spaghetti was notably long')
+
   })
 });
 
