@@ -25,7 +25,7 @@ npm install -g goo
 
 # Usage
 
-_goo <query>_ yields an answer from Wikipedia or Stack Overflow
+_goo '<query>'_ yields an answer from Wikipedia or Stack Overflow
 
 _goo again_ yields last answer
 
