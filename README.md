@@ -1,4 +1,4 @@
-# goo
+# goopal
 
 # Contents of this File
 
@@ -18,12 +18,11 @@ Goo is a command line search program. The purpose of Goo is to allow developers 
 # Project Overview
 
 Goo is built with Node, Cheerio, Request and Chalk. It is a command line utility for searching the web.
+This [repo](https://github.com/angelariggs/goopal) is a fork of the original project that I contributed to. I wanted to expand the search options to include a Drupal-specific search, among others, so I'm using Goo as a foundation for building this project on.
 
 # Local Project Setup
 
-Make sure you have node and npm installed
-
-`npm install -g node-goo`
+_GOOPAL SETUP INFORMATION FORTHCOMING_
 
 # Usage
 
