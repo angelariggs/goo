@@ -7,17 +7,15 @@
 * [Local Project Setup](#local-project-setup)
 * [Usage](#usage)
 
-
-![Goo!](http://media2.giphy.com/media/FT0UFROtAbVEA/giphy.gif)
-
-
 # Purpose
 
 Goopal is a command line search program. The purpose of Goopal is to allow developers to perform a search within their current working terminal as opposed to leaving the terminal and opening a browser.
 
 # Project Overview
 
-Goopal is built with Node, Cheerio, Request and Chalk. It is a command line utility for searching the web. This repo is a [fork](https://github.com/alexanderbanks/goo) of Goo, the original project that I contributed to. I wanted to expand the search options to include a Drupal-specific search, among others, so I'm using Goo as a foundation for building this project on.
+Goopal is built with Node, Cheerio, Request and Chalk. It is a command line utility for searching the web.
+
+This repo is a fork of Goo, the original [project](https://github.com/alexanderbanks/goo) that I contributed to. I wanted to expand the search options to include a Drupal-specific search, among others, so I've used Goo as a foundation for building this project on.
 
 # Local Project Setup
 
