@@ -17,9 +17,13 @@ Goopal is built with Node, Cheerio, Request and Chalk. It is a command line util
 
 This repo is a fork of Goo, the original [project](https://github.com/alexanderbanks/goo) that I contributed to. I wanted to expand the search options to include a Drupal-specific search, among others, so I've used Goo as a foundation for building this project on.
 
+Currently, Terminal-Search only searches Wikipedia and Stack Overflow. As the Drupal functionality is integrated, the README and manual will be updated.
+
 # Local Project Setup
 
-_GOOPAL SETUP INFORMATION FORTHCOMING_
+Make sure you have `npm` and `node` installed, then run:
+
+`npm install -g terminal-search`
 
 # Usage
 
