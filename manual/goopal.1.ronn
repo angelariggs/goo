@@ -1,4 +1,4 @@
-Goopal(1) -- Search Stack Overflow & Wikipedia from the command line
+Goopal(1) -- Search Stack Overflow, Wikipedia, & Drupal from the command line
 =================================================================
 
 
