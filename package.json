@@ -1,6 +1,8 @@
 {
-  "name": "node-goo",
-  "man": "./manual/goopal.1",
+  "name": "terminal-search",
+  "man": [
+    "./manual/goopal.1"
+  ],
   "version": "1.0.1",
   "description": "A command line google/question answering utility",
   "main": "app.js",
@@ -46,5 +48,8 @@
     "istanbul": "^0.4.5",
     "mocha": "^3.0.2",
     "mock-fs": "^3.11.0"
+  },
+  "directories": {
+    "test": "test"
   }
 }
