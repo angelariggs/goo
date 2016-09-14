@@ -23,15 +23,15 @@ _GOOPAL SETUP INFORMATION FORTHCOMING_
 
 # Usage
 
-_goo <query>_ yields an answer from Wikipedia or Stack Overflow
+_goopal <query>_ yields an answer from Wikipedia or Stack Overflow
 
-_goo again_ yields last answer
+_goopal again_ yields last answer
 
-_goo more_ yields the next top answer (Stack Overflow) OR the next paragraph chunk (Wikipedia)
+_goopal more_ yields the next top answer (Stack Overflow) OR the next paragraph chunk (Wikipedia)
 
-_man goo_ yields the manual for goo
+_man goopal_ yields the manual for goopal
 
-Example query: `goo javascript splice`
+Example query: `goopal javascript splice`
 
 Output:
 
@@ -39,7 +39,7 @@ Output:
 
 ===============================================================
 
-Example query: `goo ron artest`
+Example query: `goopal ron artest`
 
 Output:
 
