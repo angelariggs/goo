@@ -1,6 +1,6 @@
 {
   "name": "node-goo",
-  "man": "./manual/goo.1",
+  "man": "./manual/goopal.1",
   "version": "1.0.1",
   "description": "A command line google/question answering utility",
   "main": "app.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexanderbanks/goo.git"
+    "url": "git+https://github.com/angelariggs/goopal.git"
   },
   "keywords": [
     "command",
@@ -18,16 +18,16 @@
     "google",
     "stack",
     "overflow",
+    "drupal",
     "fun",
-    "friendship",
-    "alex"
+    "friendship"
   ],
   "author": "Alex Banks, Matt Borowiec, Angela Riggs, Toby Craig, Michelle Udem",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alexanderbanks/goo/issues"
+    "url": "https://github.com/angelariggs/goopal/issues"
   },
-  "homepage": "https://github.com/alexanderbanks/goo#readme",
+  "homepage": "https://github.com/angelariggs/goopal#readme",
   "dependencies": {
     "chalk": "^1.1.3",
     "cheerio": "^0.22.0",
@@ -38,7 +38,7 @@
     "url": "^0.11.0"
   },
   "bin": {
-    "goo": "app.js"
+    "goopal": "app.js"
   },
   "preferGlobal": true,
   "devDependencies": {
