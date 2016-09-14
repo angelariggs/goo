@@ -5,5 +5,5 @@
 module.exports = {
   StackOverflow: require('./stackoverflow/StackOverflowScraper'),
   Wikipedia: require('./wikipedia/WikipediaScraper'),
-  Drupal: require('./drupal/DrupalScraper')
+  Drupal: require('./drupal/Drupal7Scraper')
 };
