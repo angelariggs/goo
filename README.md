@@ -25,6 +25,8 @@ Make sure you have `npm` and `node` installed, then run:
 
 `npm install -g terminal-search`
 
+The npm package can be found [here](https://www.npmjs.com/package/terminal-search).
+
 # Usage
 
 _goopal <query>_ yields an answer from Wikipedia or Stack Overflow
