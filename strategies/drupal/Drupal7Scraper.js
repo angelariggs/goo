@@ -20,4 +20,5 @@ function Scrape(html, n) {
     // Otherwise, return text formatting and trim it
     output.push({'type': el.tagName == 'pre' ? 'code' : 'text', 'text': $(el).text().trim()});
   });
+  return output;
 }
