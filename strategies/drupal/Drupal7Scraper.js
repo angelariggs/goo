@@ -4,13 +4,13 @@ var cheerio = require('cheerio');
 
 module.exports = {
   Scrape: Scrape,
-  Domain: 'https://api.drupal.org/api/drupal/7.x'
+  Domain: 'https://www.drupal.org'
 };
 
 function Scrape(html, n) {
   // Pass in the HTML document to Cheerio
   var $ = cheerio.load(html);
-  var answer = $('.content').eq(n);
+  var answer = $('.node').eq(n);
   if(answer.length == 0) {
     return [{'type': 'text', 'text': 'Sorry, no answer found'}];
   }
