@@ -1,4 +1,4 @@
-# goo
+# goopal
 
 # Contents of this File
 
@@ -7,35 +7,37 @@
 * [Local Project Setup](#local-project-setup)
 * [Usage](#usage)
 
-
-![Goo!](http://media2.giphy.com/media/FT0UFROtAbVEA/giphy.gif)
-
-
 # Purpose
 
-Goo is a command line search program. The purpose of Goo is to allow developers to perform a search within their current working terminal as opposed to leaving the terminal and opening a browser.
+Goopal is a command line search program. The purpose of Goopal is to allow developers to perform a search within their current working terminal as opposed to leaving the terminal and opening a browser.
 
 # Project Overview
 
-Goo is built with Node, Cheerio, Request and Chalk. It is a command line utility for searching the web.
+Goopal is built with Node, Cheerio, Request and Chalk. It is a command line utility for searching the web.
+
+This repo is a fork of Goo, the original [project](https://github.com/alexanderbanks/goo) that I contributed to. I wanted to expand the search options to include a Drupal-specific search, among others, so I've used Goo as a foundation for building this project on.
+
+Currently, Terminal-Search only searches Wikipedia and Stack Overflow. As the Drupal functionality is integrated, the README and manual will be updated.
 
 # Local Project Setup
 
-Make sure you have node and npm installed
+Make sure you have `npm` and `node` installed, then run:
 
-`npm install -g node-goo`
+`npm install -g terminal-search`
+
+The npm package can be found [here](https://www.npmjs.com/package/terminal-search).
 
 # Usage
 
-_goo <query>_ yields an answer from Wikipedia or Stack Overflow
+_goopal <query>_ yields an answer from Wikipedia or Stack Overflow
 
-_goo again_ yields last answer
+_goopal again_ yields last answer
 
-_goo more_ yields the next top answer (Stack Overflow) OR the next paragraph chunk (Wikipedia)
+_goopal more_ yields the next top answer (Stack Overflow) OR the next paragraph chunk (Wikipedia)
 
-_man goo_ yields the manual for goo
+_man goopal_ yields the manual for goopal
 
-Example query: `goo javascript splice`
+Example query: `goopal javascript splice`
 
 Output:
 
@@ -43,7 +45,7 @@ Output:
 
 ===============================================================
 
-Example query: `goo ron artest`
+Example query: `goopal ron artest`
 
 Output:
 

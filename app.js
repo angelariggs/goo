@@ -16,7 +16,7 @@ switch(query) {
     Services.Google.More();
     break;
   case '':
-    console.log('For documentation, type "man goo". If you want to run a search, type "goo <query>"');
+    console.log('For documentation, type "man goopal". If you want to run a search, type "goopal <query>"');
     break;
   default:
     Services.Google.Search(query, 0);
