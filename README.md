@@ -29,7 +29,7 @@ The npm package can be found [here](https://www.npmjs.com/package/terminal-searc
 
 # Usage
 
-_goopal_ _[query]_ yields an answer from Wikipedia or Stack Overflow
+_goopal_ _[query]_ yields an answer from Wikipedia, Stack Overflow, or Drupal
 
 _goopal again_ yields last answer
 
@@ -40,18 +40,24 @@ _goopal more_ yields:
 
 _man goopal_ yields the manual for goopal
 
-Example query: `goopal javascript splice`
+Example query: `goopal git reset last commit`
 
 Output:
 
-![image](http://i.imgur.com/2S41NHz.png)
+![image](http://i.imgur.com/850O48L.png)
 
 ===============================================================
 
-Example query: `goopal ron artest`
+Example query: `goopal sloths`
 
 Output:
 
-![image](http://i.imgur.com/nmS3yss.png)
+![image](http://i.imgur.com/13JvnEd.png)
 
-blah
+===============================================================
+
+Example query: `goopal drupal how to use focal point with file entity browser`
+
+Output:
+
+![image](http://i.imgur.com/2LWvzz9.png)
