@@ -12,7 +12,7 @@ function Scrape(html, n) {
   var $ = cheerio.load(html);
   var answer = $('#content .content div[class^="field field-name-"][class*="-body"]').eq(n);
   if (answer.length == 0) {
-    return [{'type': 'text', 'text': 'Y U NO WORK'}];
+    return [{'type': 'text', 'text': 'Sorry, no answer found'}];
   }
   var output = [];
   answer.find('.field-item').children().each(function(i, el) {
