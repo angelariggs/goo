@@ -4,20 +4,18 @@ var cheerio = require('cheerio');
 
 module.exports = {
   Scrape: Scrape,
-  Domain: 'https://www.drupal.org'
+  Domain: 'www.drupal.org'
 };
 
 function Scrape(html, n) {
   // Pass in the HTML document to Cheerio
   var $ = cheerio.load(html);
-  var answer = $('.node').eq(n);
-  if(answer.length == 0) {
-    return [{'type': 'text', 'text': 'Sorry, no answer found'}];
+  var answer = $('#content .content div[class^="field field-name-"][class*="-body"]').eq(n);
+  if (answer.length == 0) {
+    return [{'type': 'text', 'text': 'Y U NO WORK'}];
   }
   var output = [];
-  answer.find('p').children().each(function(i, el) {
-    // If the DOM element is 'pre', return Chalk code formatting
-    // Otherwise, return text formatting and trim it
+  answer.find('.field-item').children().each(function(i, el) {
     output.push({'type': el.tagName == 'pre' ? 'code' : 'text', 'text': $(el).text().trim()});
   });
   return output;
