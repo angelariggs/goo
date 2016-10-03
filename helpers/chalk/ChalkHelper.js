@@ -6,8 +6,6 @@ module.exports = {
 }
 
 function prettyPrint(results) {
-    //Do some stuff to the output
-    //Then print
     results = results || [{'type': 'text', 'text': 'Sorry, no answer found'}];
 
     top();
