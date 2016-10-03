@@ -13,10 +13,18 @@ Goopal(1) -- Search Stack Overflow, Wikipedia, & Drupal from the command line
 ## OPTIONS
 
   * `more`:
-    For Stack Overflow, this will display the next answer on the page. For Wikipedia, this will display the next paragraph / chunk on the page
+    For Stack Overflow, this will display the next answer on the page.
+    For Wikipedia, this will display the next paragraph / chunk on the page.
+    For Drupal.ort, this will display the next chunk / comment on the page.
 
   * `again`:
     Displays the results of your most recent query
+
+## TIPS
+
+  When querying for Drupal information, include 'drupal' as the first word in your query.
+
+  * EXAMPLE: goopal drupal registry rebuild
 
 ## COPYRIGHT
 
